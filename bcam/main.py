@@ -173,9 +173,13 @@ def run():
     ep.mw = mw
     mw.run()
 
-if __name__ == "__main__":
+def main():
     args = {"--log": {"is_set": util.NOT_SET, "has_option": util.NO_OPTION, "option": None}}
     util.parse_args(args)
     if args["--log"]["is_set"]:
         logging.getLogger("").setLevel(logging.DEBUG)
     run()
+
+
+if __name__ == "__main__":
+    main()
